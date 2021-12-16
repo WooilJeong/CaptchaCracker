@@ -5,33 +5,33 @@
 ![](https://img.shields.io/badge/matplotlib-3.5.1-yellow.svg)
 [![Linkedin Badge](https://img.shields.io/badge/-WooilJeong-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wooil/)](https://www.linkedin.com/in/wooil/) 
 
-[한국어 문서](./README-ko.md)
+[English document](./README.md)
 
-## Introduction
+## 소개
 
-CaptchaCracker is an open source Python library that provides functions to create and apply deep learning models for Captcha Image recognition. You can create a deep learning model that recognizes numbers in the Captcha Image as shown below and outputs a string of numbers, or you can try the model yourself.
+CaptchaCracker는 Captcha Image 인식을 위한 딥 러닝 모델 생성 기능과 적용 기능을 제공하는 오픈소스 파이썬 라이브러리입니다. 아래와 같은 Captcha Image의 숫자를 인식해 숫자 문자열을 출력하는 딥 러닝 모델을 만들거나 모델을 직접 사용해볼 수 있습니다.
 
 
-### Input
+### 입력 이미지
 
 ![png](./assets/example01.png)
 
 
-### Output
+### 출력 문자열
 
 ```
 023062
 ```
 
 
-## Examples
+## 예제
 
-- Before execution, training data image files in which the actual value of the Captcha image is indicated in the following file names should be prepared.
+- 실행 전 아래와 같은 파일명에 Captcha 이미지의 실제값이 표기된 학습 데이터 이미지 파일들이 준비되어 있어야 함.
 
 ![png](./assets/example02.png)
 
 
-### Train and save the model
+### 모델 학습 및 저장하기
 
 ```python
 import glob
@@ -45,7 +45,7 @@ model.save_weights("../model/weights.h5")
 
 ```
 
-### Load a saved model to make predictions
+### 저장된 모델 불러와서 예측하기
 
 ```python
 from CaptchaCracker import ApplyModel
@@ -60,7 +60,6 @@ pred = AM.predict()
 print(pred)
 ```
 
-
-## References
+## 참고
 
 - https://keras.io/examples/vision/captcha_ocr/
