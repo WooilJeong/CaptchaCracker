@@ -32,7 +32,7 @@ pip install CaptchaCracker
 ## 의존성
 
 ```
-pip install numpy==1.9.5 tensorflow==2.5.0
+pip install numpy==1.19.5 tensorflow==2.5.0
 ```
 
 ## 예제
