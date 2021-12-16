@@ -24,6 +24,13 @@ CaptchaCracker는 Captcha Image 인식을 위한 딥 러닝 모델 생성 기능
 ```
 
 
+## 설치
+
+```bash
+pip install CaptchaCracker
+```
+
+
 ## 예제
 
 - 실행 전 아래와 같은 파일명에 Captcha 이미지의 실제값이 표기된 학습 데이터 이미지 파일들이 준비되어 있어야 함.

@@ -24,6 +24,13 @@ CaptchaCracker is an open source Python library that provides functions to creat
 ```
 
 
+## Installation
+
+```bash
+pip install CaptchaCracker
+```
+
+
 ## Examples
 
 - Before execution, training data image files in which the actual value of the Captcha image is indicated in the following file names should be prepared.
