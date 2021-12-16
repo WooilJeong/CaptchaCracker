@@ -11,7 +11,6 @@ __all__ = ["__version__", "__info__"]
 import os
 import glob
 import numpy as np
-import matplotlib.pyplot as plt
 
 from pathlib import Path
 from collections import Counter

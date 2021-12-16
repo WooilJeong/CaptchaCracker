@@ -2,10 +2,9 @@
 
 ![](https://img.shields.io/badge/TensorFlow-2.5.0-red.svg)
 ![](https://img.shields.io/badge/NumPy-1.19.5-blue.svg)
-![](https://img.shields.io/badge/matplotlib-3.5.1-yellow.svg)
 [![Linkedin Badge](https://img.shields.io/badge/-WooilJeong-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wooil/)](https://www.linkedin.com/in/wooil/) 
 
-[한국어 문서](./README-ko.md)
+[한국어 문서](https://github.com/WooilJeong/CaptchaCracker/blob/main/README-ko.md)
 
 ## Introduction
 
@@ -14,7 +13,7 @@ CaptchaCracker is an open source Python library that provides functions to creat
 
 ### Input
 
-![png](./assets/example01.png)
+![png](https://github.com/WooilJeong/CaptchaCracker/raw/main/assets/example01.png)
 
 
 ### Output
@@ -30,12 +29,17 @@ CaptchaCracker is an open source Python library that provides functions to creat
 pip install CaptchaCracker
 ```
 
+## Dependency
+
+```
+pip install numpy==1.9.5 tensorflow==2.5.0
+```
 
 ## Examples
 
 - Before execution, training data image files in which the actual value of the Captcha image is indicated in the following file names should be prepared.
 
-![png](./assets/example02.png)
+![png](https://github.com/WooilJeong/CaptchaCracker/raw/main/assets/example02.png)
 
 
 ### Train and save the model
