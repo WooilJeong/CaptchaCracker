@@ -1,5 +1,5 @@
 ## Information
-__version__ = """0.0.2"""
+__version__ = """0.0.3"""
 __info__ = """
 - Author : Wooil Jeong
 - E-mail : wooil@kakao.com
@@ -205,31 +205,15 @@ class CreateModel:
         return x_train, x_valid, y_train, y_valid
 
 
-    # A utility function to decode the output of the network
-    def decode_batch_predictions(self, pred):
-        input_len = np.ones(pred.shape[0]) * pred.shape[1]
-        # Use greedy search. For complex tasks, you can use beam search
-        results = keras.backend.ctc_decode(pred, input_length=input_len, greedy=True)[0][0][
-            :, :max_length
-        ]
-        # Iterate over the results and get back the text
-        output_text = []
-        for res in results:
-            res = tf.strings.reduce_join(self.num_to_char(res+1)).numpy().decode("utf-8")
-            output_text.append(res)
-        return output_text
-
-
 class ApplyModel:
     
     def __init__(self, 
-                 target_img_path, 
+                 weights_path,
                  img_width=200, 
                  img_height=50, 
                  max_length=6, 
                  characters={'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}):
         
-        self.target_img_path = target_img_path
         self.img_width = img_width
         self.img_height = img_height
         self.max_length = max_length
@@ -243,19 +227,15 @@ class ApplyModel:
         self.num_to_char = layers.experimental.preprocessing.StringLookup(
             vocabulary=self.char_to_num.get_vocabulary(), mask_token=None, invert=True
         )
-        
         # Model
         self.model = self.build_model()
-        
-    def load_saved_weights(self, weights_path):
-        
         self.model.load_weights(weights_path)
         self.prediction_model = keras.models.Model(
             self.model.get_layer(name="image").input, self.model.get_layer(name="dense2").output
         )
     
-    def predict(self):
-        target_img = self.encode_single_sample(self.target_img_path)['image']
+    def predict(self, target_img_path):
+        target_img = self.encode_single_sample(target_img_path)['image']
         target_img = tf.reshape(target_img, shape=[1,self.img_width,self.img_height,1])
         pred_val = self.prediction_model.predict(target_img)
         pred = self.decode_batch_predictions(pred_val)[0]

@@ -37,20 +37,20 @@ pip install numpy==1.19.5 tensorflow==2.5.0
 
 ## 예제
 
-- 실행 전 아래와 같은 파일명에 Captcha 이미지의 실제값이 표기된 학습 데이터 이미지 파일들이 준비되어 있어야 함.
+### 모델 학습 및 저장하기
+
+모델 학습 실행에 앞서 아래와 같이 파일명에 Captcha 이미지의 실제값이 표기된 학습 데이터 이미지 파일들이 준비되어 있어야 합니다.
 
 ![png](https://github.com/WooilJeong/CaptchaCracker/raw/main/assets/example02.png)
 
-
-### 모델 학습 및 저장하기
 
 ```python
 import glob
 from CaptchaCracker import CreateModel
 
-train_img_path = glob.glob("../data/train_numbers_only/*.png")
+train_img_path_list = glob.glob("../data/train_numbers_only/*.png")
 
-CM = CreateModel(train_img_path)
+CM = CreateModel(train_img_path_list)
 model = CM.train_model(epochs=100)
 model.save_weights("../model/weights.h5")
 
@@ -61,13 +61,11 @@ model.save_weights("../model/weights.h5")
 ```python
 from CaptchaCracker import ApplyModel
 
+weights_path = "../model/weights.h5"
+AM = ApplyModel(weights_path)
+
 target_img_path = "../data/target.png"
-
-AM = ApplyModel(target_img_path)
-AM.load_saved_weights("../model/weights.h5")
-
-pred = AM.predict()
-
+pred = AM.predict(target_img_path)
 print(pred)
 ```
 

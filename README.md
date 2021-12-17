@@ -37,20 +37,20 @@ pip install numpy==1.19.5 tensorflow==2.5.0
 
 ## Examples
 
-- Before execution, training data image files in which the actual value of the Captcha image is indicated in the following file names should be prepared.
+### Train and save the model
+
+Before executing model training, training data image files in which the actual value of the Captcha image is indicated in the file name should be prepared as shown below.
 
 ![png](https://github.com/WooilJeong/CaptchaCracker/raw/main/assets/example02.png)
 
-
-### Train and save the model
 
 ```python
 import glob
 from CaptchaCracker import CreateModel
 
-train_img_path = glob.glob("../data/train_numbers_only/*.png")
+train_img_path_list = glob.glob("../data/train_numbers_only/*.png")
 
-CM = CreateModel(train_img_path)
+CM = CreateModel(train_img_path_list)
 model = CM.train_model(epochs=100)
 model.save_weights("../model/weights.h5")
 
@@ -61,13 +61,11 @@ model.save_weights("../model/weights.h5")
 ```python
 from CaptchaCracker import ApplyModel
 
+weights_path = "../model/weights.h5"
+AM = ApplyModel(weights_path)
+
 target_img_path = "../data/target.png"
-
-AM = ApplyModel(target_img_path)
-AM.load_saved_weights("../model/weights.h5")
-
-pred = AM.predict()
-
+pred = AM.predict(target_img_path)
 print(pred)
 ```
 
