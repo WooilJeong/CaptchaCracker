@@ -54,6 +54,8 @@ class CreateModel:
         self.labels = [img.split(os.path.sep)[-1].split(".png")[0] for img in self.images]
         # 라벨 SET
         self.characters = set(char for label in self.labels for char in label)
+        # 라벨 최대 길이
+        self.max_length = max([len(label) for label in self.labels])
 
         # Mapping characters to integers
         self.char_to_num = layers.experimental.preprocessing.StringLookup(
@@ -69,9 +71,6 @@ class CreateModel:
         batch_size = 16
         # 다운 샘플링 요인 수 (Conv: 2, Pooling: 2)
         downsample_factor = 4
-        # 라벨 최대 길이
-        max_length = max([len(label) for label in self.labels])
-        
         
         # Splitting data into training and validation sets
         x_train, x_valid, y_train, y_valid = self.split_data(np.array(self.images), np.array(self.labels))
