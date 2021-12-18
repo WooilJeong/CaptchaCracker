@@ -41,6 +41,8 @@ pip install numpy==1.19.5 tensorflow==2.5.0
 
 Before executing model training, training data image files in which the actual value of the Captcha image is indicated in the file name should be prepared as shown below.
 
+- [Download Sample Dataset](https://github.com/WooilJeong/CaptchaCracker/raw/main/sample.zip)
+
 ![png](https://github.com/WooilJeong/CaptchaCracker/raw/main/assets/example02.png)
 
 

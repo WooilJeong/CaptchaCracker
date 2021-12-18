@@ -41,6 +41,8 @@ pip install numpy==1.19.5 tensorflow==2.5.0
 
 모델 학습 실행에 앞서 아래와 같이 파일명에 Captcha 이미지의 실제값이 표기된 학습 데이터 이미지 파일들이 준비되어 있어야 합니다.
 
+- [샘플 데이터 다운로드](https://github.com/WooilJeong/CaptchaCracker/raw/main/sample.zip)
+
 ![png](https://github.com/WooilJeong/CaptchaCracker/raw/main/assets/example02.png)
 
 
