@@ -4,7 +4,10 @@
 ![](https://img.shields.io/badge/NumPy-1.19.5-blue.svg)
 [![Linkedin Badge](https://img.shields.io/badge/-WooilJeong-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wooil/)](https://www.linkedin.com/in/wooil/) 
 
-[English document](https://github.com/WooilJeong/CaptchaCracker/blob/main/README.md)
+[English document](https://github.com/WooilJeong/CaptchaCracker/blob/main/README.md)  
+
+[Python Captcha 인식 모델 만들기](https://wooiljeong.github.io/python/captcha-cracker/)  
+
 
 ## 소개
 
