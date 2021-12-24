@@ -72,12 +72,12 @@ model.save_weights("../model/weights.h5")
 ```python
 import CaptchaCracker as cc
 
-# Training image data size
+# Target image data size
 img_width = 200
 img_height = 50
-# Training image label length
+# Target image label length
 max_length = 5
-# Training image label component
+# Target image label component
 characters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 
 # Model weight file path

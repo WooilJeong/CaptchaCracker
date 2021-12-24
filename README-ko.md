@@ -50,20 +50,20 @@ pip install numpy==1.19.5 tensorflow==2.5.0
 import glob
 import CaptchaCracker as cc
 
-# Training image data path
+# 학습 이미지 데이터 경로
 train_img_path_list = glob.glob("../data/train_numbers_only/*.png")
 
-# Training image data size
+# 학습 이미지 데이터 크기
 img_width = 200
 img_height = 50
 
-# Creating an instance that creates a model
+# 모델 생성 인스턴스
 CM = cc.CreateModel(train_img_path_list, img_width, img_height)
 
-# Performing model training
+# 모델 학습
 model = CM.train_model(epochs=100)
 
-# Saving the weights learned by the model to a file
+# 모델이 학습한 가중치 파일로 저장
 model.save_weights("../model/weights.h5")
 ```
 
@@ -72,26 +72,25 @@ model.save_weights("../model/weights.h5")
 ```python
 import CaptchaCracker as cc
 
-# Training image data size
+# 타겟 이미지 크기
 img_width = 200
 img_height = 50
-# Training image label length
+# 타겟 이미지 라벨 길이
 max_length = 5
-# Training image label component
+# 타겟 이미지 라벨 구성요소
 characters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
 
-# Model weight file path
+# 모델 가중치 파일 경로
 weights_path = "../model/weights.h5"
-# Creating a model application instance
+# 모델 적용 인스턴스
 AM = cc.ApplyModel(weights_path, img_width, img_height, max_length, characters)
 
-# Target image path
+# 타겟 이미지 경로
 target_img_path = "../data/target.png"
 
-# Predicted value
+# 예측값
 pred = AM.predict(target_img_path)
 print(pred)
-```red)
 ```
 
 ## 참고
