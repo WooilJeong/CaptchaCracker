@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="CaptchaCracker",
-    version="0.0.4",
+    version="0.0.5",
     license='MIT',
     author="Wooil Jeong",
     author_email="wooil@kakao.com",
