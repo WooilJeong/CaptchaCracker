@@ -56,7 +56,7 @@ class CreateModel:
             vocabulary=self.char_to_num.get_vocabulary(), mask_token=None, invert=True
         )
         
-    def train_model(self, epochs=100):
+    def train_model(self, epochs=100, earlystopping=False):
         # 학습 및 검증을 위한 배치 사이즈 정의
         batch_size = 16
         # 다운 샘플링 요인 수 (Conv: 2, Pooling: 2)
@@ -86,20 +86,30 @@ class CreateModel:
         # Get the model
         model = self.build_model()
         
-        
-        early_stopping_patience = 10
-        # Add early stopping
-        early_stopping = keras.callbacks.EarlyStopping(
-            monitor="val_loss", patience=early_stopping_patience, restore_best_weights=True
-        )
+        if earlystopping == True:
 
-        # Train the model
-        history = model.fit(
-            train_dataset,
-            validation_data=validation_dataset,
-            epochs=epochs,
-            callbacks=[early_stopping],
-        )
+            early_stopping_patience = 10
+            # Add early stopping
+            early_stopping = keras.callbacks.EarlyStopping(
+                monitor="val_loss", patience=early_stopping_patience, restore_best_weights=True
+            )
+
+            # Train the model
+            history = model.fit(
+                train_dataset,
+                validation_data=validation_dataset,
+                epochs=epochs,
+                callbacks=[early_stopping],
+            )
+        
+        else:
+            # Train the model
+            history = model.fit(
+                train_dataset,
+                validation_data=validation_dataset,
+                epochs=epochs
+            )
+
         
         return model
     
