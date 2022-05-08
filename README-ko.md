@@ -26,6 +26,10 @@ CaptchaCracker는 Captcha Image 인식을 위한 딥 러닝 모델 생성 기능
 023062
 ```
 
+## 웹에서 테스트해보기
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/CaptchaCracker)
+
 
 ## 설치
 
