@@ -1,13 +1,33 @@
 # CaptchaCracker
 
+[![PyPI Latest Release](https://img.shields.io/pypi/v/captchacracker.svg)](https://pypi.org/project/captchacracker/)
 ![](https://img.shields.io/badge/TensorFlow-2.5.0-red.svg)
 ![](https://img.shields.io/badge/NumPy-1.19.5-blue.svg)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWooilJeong%2FCaptchaCracker&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-[![Linkedin Badge](https://img.shields.io/badge/-WooilJeong-blue?style=plastic&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/wooil/)](https://www.linkedin.com/in/wooil/) 
+
 
 [English document](https://github.com/WooilJeong/CaptchaCracker/blob/main/README.md)  
 
 [Python Captcha 인식 모델 만들기](https://wooiljeong.github.io/python/captcha-cracker/)  
+
+
+## 기여자
+
+<div align="center">
+    <table>
+    <tr>
+        <td align="center">
+            <a href="https://github.com/wooiljeong">
+            <img src="https://avatars.githubusercontent.com/u/38076110?v=4" width="100px;" alt=""/><br />
+            <sub><b>정우일</b></sub></a><br />
+        </td>
+        <td align="center">
+            <a href="https://github.com/AK391">
+            <img src="https://avatars.githubusercontent.com/u/81195143?v=4" width="100px;" alt=""/><br />
+            <sub><b>AK391</b></sub></a><br />
+        </td>
+    </tr>
+    </table>
+</div>
 
 
 ## 소개
@@ -104,3 +124,11 @@ print(pred)
 ## 참고
 
 - https://keras.io/examples/vision/captcha_ocr/
+
+<br>
+
+<div align=center>
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWooilJeong%2FCaptchaCracker&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+</div>
