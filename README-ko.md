@@ -1,4 +1,7 @@
-# CaptchaCracker
+<div align="center">
+
+<b>보안 문자 이미지 인식 모델을 생성하기 위한 오픈소스 파이썬 딥러닝 로우코드 라이브러리</b><br>
+<b>🚀`pip install CaptchaCracker --upgrade`</b>
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/captchacracker.svg)](https://pypi.org/project/captchacracker/)
 ![](https://img.shields.io/badge/TensorFlow-2.5.0-red.svg)
@@ -9,28 +12,11 @@
 
 [Python Captcha 인식 모델 만들기](https://wooiljeong.github.io/python/captcha-cracker/)  
 
-
-## 기여자
-
-<div align="center">
-    <table>
-    <tr>
-        <td align="center">
-            <a href="https://github.com/wooiljeong">
-            <img src="https://avatars.githubusercontent.com/u/38076110?v=4" width="100px;" alt=""/><br />
-            <sub><b>정우일</b></sub></a><br />
-        </td>
-        <td align="center">
-            <a href="https://github.com/AK391">
-            <img src="https://avatars.githubusercontent.com/u/81195143?v=4" width="100px;" alt=""/><br />
-            <sub><b>AK391</b></sub></a><br />
-        </td>
-    </tr>
-    </table>
-</div>
+<div align="left">
 
 
-## 소개
+
+## CaptchaCracker
 
 CaptchaCracker는 Captcha Image 인식을 위한 딥 러닝 모델 생성 기능과 적용 기능을 제공하는 오픈소스 파이썬 라이브러리입니다. 아래와 같은 Captcha Image의 숫자를 인식해 숫자 문자열을 출력하는 딥 러닝 모델을 만들거나 모델을 직접 사용해볼 수 있습니다.
 
@@ -46,7 +32,7 @@ CaptchaCracker는 Captcha Image 인식을 위한 딥 러닝 모델 생성 기능
 023062
 ```
 
-## 웹에서 테스트해보기
+## 웹 데모 (Hugging Face)
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/CaptchaCracker)
 
@@ -126,6 +112,14 @@ print(pred)
 - https://keras.io/examples/vision/captcha_ocr/
 
 <br>
+
+
+## 기여자
+
+<a href="https://github.com/wooiljeong/captchacracker/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wooiljeong/captchacracker" />
+</a>
+
 
 <div align=center>
 

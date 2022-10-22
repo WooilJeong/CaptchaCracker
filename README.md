@@ -1,4 +1,8 @@
-# CaptchaCracker
+<div align="center">
+
+<b>Open source Python Deep Learning low-code library for generating captcha image recognition models</b><br>
+<b>🚀`pip install CaptchaCracker --upgrade`</b>
+
 
 [![PyPI Latest Release](https://img.shields.io/pypi/v/captchacracker.svg)](https://pypi.org/project/captchacracker/)
 ![](https://img.shields.io/badge/TensorFlow-2.5.0-red.svg)
@@ -6,26 +10,12 @@
 
 [한국어 문서](https://github.com/WooilJeong/CaptchaCracker/blob/main/README-ko.md)
 
-## Contributors
+<div align="left">
 
-<div align="center">
-    <table>
-    <tr>
-        <td align="center">
-            <a href="https://github.com/wooiljeong">
-            <img src="https://avatars.githubusercontent.com/u/38076110?v=4" width="100px;" alt=""/><br />
-            <sub><b>Wooil Jeong</b></sub></a><br />
-        </td>
-        <td align="center">
-            <a href="https://github.com/AK391">
-            <img src="https://avatars.githubusercontent.com/u/81195143?v=4" width="100px;" alt=""/><br />
-            <sub><b>AK391</b></sub></a><br />
-        </td>
-    </tr>
-    </table>
-</div>
 
-## Introduction
+<br>
+
+## CaptchaCracker
 
 CaptchaCracker is an open source Python library that provides functions to create and apply deep learning models for Captcha Image recognition. You can create a deep learning model that recognizes numbers in the Captcha Image as shown below and outputs a string of numbers, or you can try the model yourself.
 
@@ -46,17 +36,23 @@ CaptchaCracker is an open source Python library that provides functions to creat
 Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try out the Web Demo: [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/CaptchaCracker)
 
 
+<br>
+
 ## Installation
 
 ```bash
 pip install CaptchaCracker
 ```
 
+<br>
+
 ## Dependency
 
 ```
 pip install numpy==1.19.5 tensorflow==2.5.0
 ```
+
+<br>
 
 ## Examples
 
@@ -117,9 +113,19 @@ print(pred)
 ```
 
 
+<br>
+
 ## References
 
 - https://keras.io/examples/vision/captcha_ocr/
+
+<br>
+
+## Contributors
+
+<a href="https://github.com/wooiljeong/captchacracker/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wooiljeong/captchacracker" />
+</a>
 
 <br>
 
