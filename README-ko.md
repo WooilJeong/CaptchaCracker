@@ -6,6 +6,7 @@
 [![PyPI Latest Release](https://img.shields.io/pypi/v/captchacracker.svg)](https://pypi.org/project/captchacracker/)
 ![](https://img.shields.io/badge/TensorFlow-2.5.0-red.svg)
 ![](https://img.shields.io/badge/NumPy-1.19.5-blue.svg)
+[![Downloads](https://static.pepy.tech/badge/captchacracker)](https://pepy.tech/project/captchacracker)  
 
 
 [English document](https://github.com/WooilJeong/CaptchaCracker/blob/main/README.md)  
@@ -123,6 +124,6 @@ print(pred)
 
 <div align=center>
 
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWooilJeong%2FCaptchaCracker&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWooilJeong%2FCaptchaCracker&count_bg=%2379C83D&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) -->
 
 </div>
