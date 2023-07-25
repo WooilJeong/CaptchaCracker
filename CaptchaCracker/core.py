@@ -2,6 +2,8 @@ import os
 import glob
 import numpy as np
 
+import io
+from PIL import Image
 from pathlib import Path
 from collections import Counter
 
@@ -239,23 +241,29 @@ class ApplyModel:
         pred_val = self.prediction_model.predict(target_img)
         pred = self.decode_batch_predictions(pred_val)[0]
         return pred
-        
+
+    def predict_from_bytes(self, image_bytes):
+        target_img = self.encode_single_sample_from_bytes(image_bytes)['image']
+        target_img = tf.expand_dims(target_img, 0)
+        pred_val = self.prediction_model.predict(target_img)
+        pred = self.decode_batch_predictions(pred_val)[0]
+        return pred
+
     def encode_single_sample(self, img_path):
-        # 1. Read image
         img = tf.io.read_file(img_path)
-        # 2. Decode and convert to grayscale
         img = tf.io.decode_png(img, channels=1)
-        # 3. Convert to float32 in [0, 1] range
         img = tf.image.convert_image_dtype(img, tf.float32)
-        # 4. Resize to the desired size
         img = tf.image.resize(img, [self.img_height, self.img_width])
-        # 5. Transpose the image because we want the time
-        # dimension to correspond to the width of the image.
         img = tf.transpose(img, perm=[1, 0, 2])
-        # 6. Map the characters in label to numbers
-        # 7. Return a dict as our model is expecting two inputs
         return {"image": img}
-    
+
+    def encode_single_sample_from_bytes(self, image_bytes):
+        img = tf.io.decode_image(image_bytes, channels=1)
+        img = tf.image.convert_image_dtype(img, tf.float32)
+        img = tf.image.resize(img, [self.img_height, self.img_width])
+        img = tf.transpose(img, perm=[1, 0, 2])
+        return {"image": img}
+
     def build_model(self):
         # Inputs to the model
         input_img = layers.Input(

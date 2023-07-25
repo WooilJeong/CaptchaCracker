@@ -2,7 +2,7 @@
 from .core import CreateModel, ApplyModel
 
 ## Information
-__version__ = """0.0.6"""
+__version__ = """0.0.7"""
 __info__ = """
 - Author : Wooil Jeong
 - E-mail : wooil@kakao.com
