@@ -88,7 +88,10 @@ model = CM.train_model(epochs=100)
 model.save_weights("../model/weights.h5")
 ```
 
+
 ### Load a saved model to make predictions
+
+- input: image file path
 
 ```python
 import CaptchaCracker as cc
@@ -113,6 +116,34 @@ target_img_path = "../data/target.png"
 pred = AM.predict(target_img_path)
 print(pred)
 ```
+
+
+### Load a saved model to make predictions
+
+- input: image bytes object
+
+```python
+import CaptchaCracker as cc
+
+# Target image data size
+img_width = 200
+img_height = 50
+# Target image label length
+max_length = 6
+# Target image label component
+characters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'}
+
+# Model weight file path
+weights_path = "../model/weights.h5"
+# Creating a model application instance
+AM = cc.ApplyModel(weights_path, img_width, img_height, max_length, characters)
+
+# Predicted value
+target_img_bytes = "..."
+pred = AM.predict_from_bytes(target_img_bytes)
+print(pred)
+```
+
 
 
 <br>
